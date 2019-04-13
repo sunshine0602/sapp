@@ -1,0 +1,118 @@
+<view id="body"> 
+<!-- class='{{selected?'show':'hidden'}}' -->
+<!-- 搜素框 -->
+  <view id="search">
+    <view>
+      <input class="search" type='text' 
+        placeholder="请输入要搜索的内容" 
+        confirm-type='search'
+        value='{{inputValue}}'
+        bindinput='inputBind'
+        bindconfirm='search'
+      />
+    </view>
+    <button class="button" bindtap='search'>搜索</button>
+  </view>
+
+<!-- 轮播图 -->
+  <view class="lunbo_box">
+    <swiper class="luobo"
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}"
+      interval="{{interval}}"
+      duration="{{duration}}"
+      circular="true"
+    >
+      <block wx:for="{{imgUrls}}">
+        <swiper-item bindtap="luobo" data-url="{{item.redirect_url}}">
+          <image src="{{item.img_url}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+<!-- 四个图标icons-->
+  <view class="icons">
+    <ul class="icons_ul">
+      <li wx:for="{{menus}}" wx:for-index="idx" wx:for-item="itemName" data-id="{{itemName.id}}" bindtap='icosId'>
+        <image src='{{itemName.img_url}}'></image>
+        <span>{{itemName.title}}</span>
+      </li>
+    </ul>
+  </view>
+
+<!--店长推荐-->
+  <view class='recommend'>
+    <view class='recommend_box'>
+      <image src='/image/recommend01.png'></image>
+      <span>每日推荐</span>
+      <image src='/image/recommend02.png'></image>
+    </view>
+  </view>
+
+<!--每日推荐横向滚动-->
+  <scroll-view scroll-x="true" class='recommends'>
+    <block wx:for="{{recommends}}" wx:key="item">
+      <view class='recommends_box'>
+        <image src='{{item.img_url}}'></image>
+        <span>{{item.product_name}}</span>
+        <a>{{item.price}}</a>
+      </view>
+    </block>
+  </scroll-view>
+
+<!--精品商城-->
+  <view class='recommend'>
+    <view class='recommend_box'>
+      <image src='/image/recommend01.png'></image>
+      <span>精品商城</span>
+      <image src='/image/recommend02.png'></image>
+    </view>
+  </view> 
+
+  <!--商品列表-->
+  <view>
+    <view>
+      <scroll-view scroll-x='true' class='navbar'>
+        <block wx:for='{{store}}' wx:key="item">
+          <view class='item_name' bindtap='category' data-id='{{item.id}}'>
+            {{item.name}}
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+
+    <view>
+      <block wx:for='{{list}}' wx:key='item' >
+          <view class='store_list'>
+            <image src='{{item.img_url}}'></image>
+            <span class='jd'>
+              <text>京东</text>
+              {{item.sku_name}}
+            </span>
+            <view class='quan' wx:if='{{item.coupon_discount>0}}'>
+                <image src='/image/quan.png'></image>
+                <text>{{item.coupon_discount}}</text>
+            </view>
+            <view class='quan_after_box'>
+               <span>券后价:$
+                  <text class='quan_after'>{{item.group_price}}</text>
+                  <text class='pre_price'>${{item.price}}</text>
+               </span>
+            </view>
+             <view class='pre_fee'>
+               <span>佣金:
+                  <text>{{item.pre_fee}}</text>
+               </span>
+            </view>
+          </view>
+      </block>
+    </view>
+  </view>
+
+  <view class='bottom'>
+     <view class="{{selected?'green':'default'}}" bindtap='selected'>首页</view>
+     <view class="{{selected1?'green':'default'}}" bindtap='selected1'>社区团</view>
+     <view class="{{selected2?'green':'default'}}" bindtap='selected2'>我的</view>
+  </view>
+</view>

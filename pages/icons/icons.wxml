@@ -1,0 +1,28 @@
+<view class='list_box'>
+      <view wx:for='{{list}}' wx:key='item' class='store_list' >
+            <view class='store_list_image'>
+              <image src='{{item.img_url}}'></image>
+            </view>
+            <view class='store_list_right'>
+              <span class='jd'>
+                <text>京东</text>
+                {{item.sku_name}}
+              </span>
+              <view class='quan' wx:if='{{item.coupon_discount>0}}'>
+                  <image src='/image/quan.png'></image>
+                  <text>{{item.coupon_discount}}</text>
+              </view>
+              <view class='quan_after_box'>
+                <span>券后价:$
+                    <text class='quan_after'>{{item.group_price}}</text>
+                    <text class='pre_price'>${{item.price}}</text>
+                </span>
+              </view>
+              <view class='pre_fee'>
+                <span>佣金:$
+                    <text>{{item.pre_fee}}</text>
+                </span>
+              </view>
+            </view>
+      </view>
+  </view>

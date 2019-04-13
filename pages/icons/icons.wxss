@@ -1,0 +1,70 @@
+
+.list_box{
+  margin:15rpx auto;
+  width: 95%;
+}
+.store_list{
+  height: 300rpx;
+  width: 100%;
+  border-bottom: 1rpx solid rgb(240, 233, 233);
+  padding-bottom: 15rpx;
+}
+.store_list_image{
+  margin-left: 20rpx;
+  display: inline;
+}
+.store_list_image image{
+  height: 260rpx;
+  width: 260rpx;
+  margin-top: 20rpx;
+}
+.store_list_right{
+  width: 45%;
+  float: right;
+  margin: 40rpx 40rpx 0 0 ;
+}
+.jd{
+  font-size: 26rpx;
+  height: 78rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2;
+  word-break: break-all;
+}
+.jd text{
+  background: red;
+  color: white;
+  border-radius: 10rpx;
+  padding: 3rpx 7rpx;
+}
+.quan{
+  position: relative;
+  height: 40rpx;
+  margin-top: 10rpx;
+}
+.quan image{
+   width: 150rpx;
+   height: 38rpx;
+}
+.quan text{
+  font-size: 24rpx;
+  color: white;
+  position: absolute;
+  left: 60rpx;
+  top:7rpx;
+}
+
+.quan_after_box span{
+  font-size: 26rpx;
+}
+.quan_after{
+  color: red;
+}
+.pre_price{
+  padding-left: 15rpx;
+  text-decoration: line-through;
+}
+.pre_fee{
+    font-size: 26rpx;
+}

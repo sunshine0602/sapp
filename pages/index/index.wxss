@@ -1,0 +1,226 @@
+#body{
+  margin:0 atuo;
+  height: 100%;
+  width: 100%;
+}
+
+/*----搜索栏-----*/
+#search{
+  height: 72rpx;
+  width: 100%;
+  background:white;
+  position:fixed;
+  top:0;
+  left: 0;
+  display: flex;
+  z-index: 99;
+}
+.search{
+  height: 60rpx;
+  width: 500rpx;
+  display: flex;
+  border: 1px solid rgb(240, 233, 233);
+  background:   rgb(240, 233, 233);
+  font-size: 27rpx;
+  border-radius: 10rpx;
+  float: left;
+  margin: 0 20rpx 5rpx 30rpx;
+  padding-left: 20rpx;
+}
+.button{
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 100rpx;
+  background: rgb(209, 38, 38);
+  font-size: 27rpx;
+  color: white;
+  padding: 0;
+}
+
+
+/*----轮播图-----*/
+.luobo{
+  height: 300rpx;
+  width:95%;
+  margin: 100rpx auto 30rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+
+
+/*----icon-----*/
+.icons{
+  height: 200rpx;
+  width: 100%;
+}
+.icons_ul{
+ height: 200rpx;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.icons_ul li{
+  width: 25%;
+  height: 200rpx;
+  text-align: center;
+  
+}
+.icons_ul li image{
+  margin: 15rpx auto 0;
+  display: block;
+  height: 130rpx;
+  width: 70%;
+  /* border: 1px solid rgb(110, 104, 168); */
+}
+.icons_ul li span{
+  font-size:28rpx;
+}
+
+/* ------店长推荐-------- */
+.recommend{
+  height: 80rpx;
+  margin-top:60rpx;
+}
+.recommend_box{
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recommend_box image{
+  height: 60rpx;
+  width: 30%;
+  margin: 0 20rpx;
+}
+
+/* -------每日推荐横向滚动-------- */
+.recommends{
+  height: 250rpx;
+  /* display: flex; */
+  white-space: nowrap;
+  margin-top: 20rpx;
+}
+.recommends_box{
+  height: 250rpx;
+  width: 265rpx;
+  display: inline-block;
+}
+.recommends_box image{
+  height: 180rpx;
+  width: 180rpx;
+  margin-left: 20rpx;  
+}
+.recommends_box span{
+  display: block;
+  margin: 0 15rpx;
+  font-size: 22rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap；
+}
+.recommends_box a{
+  display: block;
+  font-size: 20rpx;
+  margin: 0 20rpx;
+}
+
+
+
+/* ---------精品商城导航栏------- */
+.navbar{
+  height: 60rpx;
+  width: 95%;
+  margin: 0 auto;
+  white-space: nowrap;
+  padding: 0;
+}
+.item_name{
+  font-size: 30rpx;
+  width: 25%;
+  display: inline-block;
+  text-align:center;
+  padding-top: 15rpx;
+  margin-top: 0;
+}
+
+/* --------精品商城商品list-------- */
+.store_list{
+  height: 540rpx;
+  width: 47%;
+  float: left;
+  margin-left: 20rpx;
+  border-bottom: 1rpx solid rgb(240, 233, 233);
+}
+.store_list image{
+  height: 300rpx;
+  width: 350rpx;
+}
+.jd{
+  font-size: 26rpx;
+  height: 68rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2;
+  word-break: break-all;
+}
+.jd text{
+  background: red;
+  color: white;
+  border-radius: 10rpx;
+  padding: 3rpx 7rpx;
+}
+.quan{
+  position: relative;
+  height: 40rpx;
+  margin-top: 10rpx;
+}
+.quan image{
+   width: 130rpx;
+   height: 35rpx;
+}
+.quan text{
+  font-size: 24rpx;
+  color: white;
+  position: absolute;
+  left: 60rpx;
+  top:7rpx;
+}
+
+.quan_after_box span{
+  font-size: 26rpx;
+}
+.quan_after{
+  color: red;
+}
+.pre_price{
+  padding-left: 15rpx;
+  text-decoration: line-through;
+}
+.pre_fee{
+    font-size: 26rpx;
+}
+
+/* ---------底部------- */
+.bottom{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: white;
+  display: flex;
+}
+.default{
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 36rpx; 
+  width: 33%;
+}
+.green{
+   color: #659f32;
+}

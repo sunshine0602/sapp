@@ -1,0 +1,101 @@
+#search{
+  height: 72rpx;
+  width: 100%;
+  background: white;
+  position:fixed;
+  top:0;
+  left: 0;
+  display: flex;
+  z-index: 99;
+}
+.search{
+  height: 60rpx;
+  width: 500rpx;
+  display: flex;
+  border: 1px solid rgb(240, 233, 233);
+  background:   rgb(240, 233, 233);
+  font-size: 27rpx;
+  border-radius: 10rpx;
+  float: left;
+  margin: 0 20rpx 5rpx 30rpx;
+  padding-left: 20rpx;
+}
+.button{
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 100rpx;
+  background: rgb(209, 38, 38);
+  font-size: 27rpx;
+  color: white;
+  padding: 0;
+}
+
+.list_box{
+  margin:80rpx auto 10rpx;
+  width: 95%;
+}
+.store_list{
+  height: 300rpx;
+  width: 100%;
+  border-bottom: 1rpx solid rgb(240, 233, 233);
+  padding-bottom: 15rpx;
+}
+.store_list_image{
+  margin-left: 20rpx;
+  display: inline;
+}
+.store_list_image image{
+  height: 250rpx;
+  width: 250rpx;
+  margin-top: 20rpx;
+}
+.store_list_right{
+  width: 45%;
+  float: right;
+  margin: 40rpx 40rpx 0 0 ;
+}
+.jd{
+  font-size: 26rpx;
+  height: 68rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2;
+  word-break: break-all;
+}
+.jd text{
+  background: red;
+  color: white;
+  border-radius: 10rpx;
+  padding: 3rpx 7rpx;
+}
+.quan{
+  position: relative;
+  height: 40rpx;
+  margin-top: 10rpx;
+}
+.quan image{
+   width: 130rpx;
+   height: 35rpx;
+}
+.quan text{
+  font-size: 24rpx;
+  color: white;
+  position: absolute;
+  left: 60rpx;
+  top:7rpx;
+}
+
+.quan_after_box span{
+  font-size: 26rpx;
+}
+.quan_after{
+  color: red;
+}
+.pre_price{
+  padding-left: 15rpx;
+  text-decoration: line-through;
+}
+.pre_fee{
+    font-size: 26rpx;
+}
